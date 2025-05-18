@@ -1,0 +1,23 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a//dev/null b/index.html
+index 0000000..9658aa5 100644
+--- a//dev/null
++++ b/index.html
+@@ -0,0 +1,14 @@
++<!DOCTYPE html>
++<html lang="ja">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Trial Tetris</title>
++  <link rel="stylesheet" href="style.css">
++</head>
++<body>
++  <h1>Trial Tetris</h1>
++  <canvas id="game" width="240" height="400"></canvas>
++  <script src="script.js"></script>
++</body>
++</html>
+ 
+EOF
+)
